@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adiyogi Astro | AI-Powered Vedic Astrology for Life's Biggest Moments</title>
+    <meta name="description" content="Adiyogi Astro combines the Saptarishis' ancient Vedic wisdom with AI agents to find the perfect muhurat for weddings, baby celebrations, new ventures, and every important life decision." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "ogl": "https://cdn.jsdelivr.net/npm/ogl/dist/ogl.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ===== NOISE TEXTURE OVERLAY ===== -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- ===== STICKY HEADER ===== -->
+    <header class="site-header">
+      <div class="header-inner container">
+        <div class="brand">
+          <span class="brand-mark">AA</span>
+          <span class="brand-name">Adiyogi Astro</span>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#moments">Life Moments</a>
+          <a href="#agents">AI Rishis</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#launch" class="btn btn--ghost">Join Waitlist</a>
+          <a href="#launch" class="btn btn--primary">Get Early Access</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== TICKER / MARQUEE ===== -->
+    <div class="ticker" aria-label="announcements" role="marquee">
+      <div class="ticker-track">
+        <span class="ticker-item">🪔 शुभ मुहूर्त — Find the perfect timing for life's biggest moments</span>
+        <span class="ticker-item">🔱 Powered by Saptarishi AI Agents — ancient wisdom meets modern intelligence</span>
+        <span class="ticker-item">🕉️ Muhurat for weddings, business, baby ceremonies & career decisions</span>
+        <span class="ticker-item">⭐ 9 Grahas · 12 Rashis · 27 Nakshatras · 7 Rishis — all aligned for you</span>
+        <span class="ticker-item">🪔 शुभ मुहूर्त — Find the perfect timing for life's biggest moments</span>
+        <span class="ticker-item">🔱 Powered by Saptarishi AI Agents — ancient wisdom meets modern intelligence</span>
+        <span class="ticker-item">🕉️ Muhurat for weddings, business, baby ceremonies & career decisions</span>
+        <span class="ticker-item">⭐ 9 Grahas · 12 Rashis · 27 Nakshatras · 7 Rishis — all aligned for you</span>
+      </div>
+    </div>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="hero">
+        <div class="hero-bg">
+          <div class="galaxy-layer" id="galaxy-hero"></div>
+          <div class="hero-grid-pattern" aria-hidden="true"></div>
+        </div>
+        <div class="hero-content container">
+          <p class="mono-label">सप्तऋषि × AI · Vedic Timing Intelligence</p>
+          <h1 class="hero-title">
+            <span>The </span><em>AI Astrology</em><span> Platform</span><br/>
+            <span>for life's biggest moments</span>
+          </h1>
+          <p class="hero-sub">
+            Know the right day for your wedding, the perfect muhurat for your new business,
+            the auspicious hour for your child's naming ceremony — guided by
+            the Saptarishis, delivered by AI.
+          </p>
+          <div class="hero-ctas">
+            <a href="#launch" class="btn btn--primary btn--lg">Find Your Muhurat</a>
+            <a href="#features" class="btn btn--ghost btn--lg">See How It Works</a>
+          </div>
+        </div>
+        <!-- Hero showcase image -->
+        <div class="hero-showcase container">
+          <div class="showcase-frame">
+            <img src="images/saptarishi-golden-wave.png" alt="Saptarishis channeling cosmic energy" class="showcase-img" />
+            <div class="showcase-caption">
+              <span class="mono-label">Live Convergence</span>
+              <strong>Planetary alignment visualization — real-time graha positions mapped to your birth chart</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURES GRID ===== -->
+      <section class="features-section" id="features">
+        <div class="container">
+          <div class="section-header">
+            <p class="mono-label">Connected AI workflows for every cosmic question</p>
+            <h2>Ancient wisdom meets modern intelligence — <em>in one platform</em></h2>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card feature-card--wide">
+              <div class="feature-card__visual">
+                <img src="images/saptarishi-cosmic-meditation.png" alt="Cosmic Saptarishis in meditation" />
+              </div>
+              <div class="feature-card__content">
+                <h3>Muhurat Finder</h3>
+                <p>AI-powered auspicious timing for any life event. Our agents analyze planetary positions, nakshatras, and tithis in real-time to find the perfect moment.</p>
+                <span class="feature-tag">शुभ मुहूर्त · Auspicious Timing</span>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__visual">
+                <img src="images/goddess-meditation.png" alt="Goddess in deep meditation" />
+              </div>
+              <div class="feature-card__content">
+                <h3>Birth Chart Intelligence</h3>
+                <p>Deep Kundali analysis powered by Vedic calculations and AI interpretation — not generic horoscopes.</p>
+                <span class="feature-tag">कुंडली · Kundali</span>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__visual">
+                <img src="images/deity-cosmic-planets.png" alt="Cosmic deity among planets" />
+              </div>
+              <div class="feature-card__content">
+                <h3>Planetary Dashboard</h3>
+                <p>Live graha transit tracking with personalized impact analysis — see how planetary movements affect your chart.</p>
+                <span class="feature-tag">ग्रह गोचर · Graha Transit</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIAL / QUOTE BAND ===== -->
+      <section class="quote-band">
+        <div class="container">
+          <blockquote class="quote-card">
+            <div class="quote-accent"></div>
+            <p>"The right moment changes everything. A wedding on the right day. A business started at the right hour. A name given under the right star."</p>
+            <cite>
+              <strong>Vedic Wisdom</strong>
+              <span>ज्योतिष शास्त्र · Jyotish Shastra</span>
+            </cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ===== LIFE MOMENTS — Alternating Feature Showcases ===== -->
+      <section class="moments-section" id="moments">
+        <div class="container">
+          <div class="section-header">
+            <p class="mono-label">जीवन के शुभ अवसर · Life's auspicious occasions</p>
+            <h2>We find the perfect moment <em>for what matters most</em></h2>
+          </div>
+
+          <!-- Moment 1: Wedding -->
+          <div class="moment-showcase">
+            <div class="moment-showcase__visual">
+              <div class="showcase-frame">
+                <img src="images/goddess-prince-lotus.png" alt="Royal couple with lotus" />
+              </div>
+            </div>
+            <div class="moment-showcase__content">
+              <span class="mono-label">विवाह · Wedding & Engagement</span>
+              <h3>The most important date deserves cosmic alignment</h3>
+              <p>Find the perfect muhurat for your engagement, wedding day, and griha pravesh. Our AI cross-references your charts with planetary positions across all 27 nakshatras.</p>
+              <ul class="moment-tags">
+                <li>Wedding Date</li>
+                <li>Engagement</li>
+                <li>Griha Pravesh</li>
+                <li>Sagai</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Testimonial inline -->
+          <div class="inline-quote">
+            <blockquote>
+              <p>"When planetary forces converge with the right moment in time, ordinary actions become extraordinary beginnings."</p>
+              <cite>— Ancient Saptarishi Teaching</cite>
+            </blockquote>
+          </div>
+
+          <!-- Moment 2: Business -->
+          <div class="moment-showcase moment-showcase--reverse">
+            <div class="moment-showcase__visual">
+              <div class="showcase-frame">
+                <img src="images/goddess-temple.png" alt="Goddess at temple" />
+              </div>
+            </div>
+            <div class="moment-showcase__content">
+              <span class="mono-label">व्यापार · New Business & Ventures</span>
+              <h3>Begin every venture with Lakshmi and Ganesh on your side</h3>
+              <p>Opening a shop? Launching a startup? Our AI finds the ideal day for Lakshmi Puja, Ganesh Puja, and your grand opening — aligned with planetary prosperity cycles.</p>
+              <ul class="moment-tags">
+                <li>Shop Opening</li>
+                <li>Lakshmi Puja</li>
+                <li>Ganesh Puja</li>
+                <li>Startup Launch</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Moment 3: Baby -->
+          <div class="moment-showcase">
+            <div class="moment-showcase__visual">
+              <div class="showcase-frame">
+                <img src="images/goddess-vishnu-lotus.png" alt="Divine blessing with lotus" />
+              </div>
+            </div>
+            <div class="moment-showcase__content">
+              <span class="mono-label">नामकरण · Baby Celebrations</span>
+              <h3>Every milestone deserves a blessed beginning</h3>
+              <p>Find the most auspicious day for your child's naming ceremony, first feeding, mundan, and birthday celebrations. Our AI maps nakshatra pada to find the ideal starting letters for names.</p>
+              <ul class="moment-tags">
+                <li>Naming Ceremony</li>
+                <li>First Birthday</li>
+                <li>Mundan</li>
+                <li>Annaprashan</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Moment 4: Career -->
+          <div class="moment-showcase moment-showcase--reverse">
+            <div class="moment-showcase__visual">
+              <div class="showcase-frame">
+                <img src="images/prince-warrior.png" alt="Warrior prince" />
+              </div>
+            </div>
+            <div class="moment-showcase__content">
+              <span class="mono-label">करियर · Career & Employment</span>
+              <h3>Know which days carry the right energy for growth</h3>
+              <p>Joining a new job? Seeking a promotion? Preparing for an interview? Our AI identifies days when your career houses are strongest and planetary dashas favor professional advancement.</p>
+              <ul class="moment-tags">
+                <li>New Job</li>
+                <li>Promotion</li>
+                <li>Education</li>
+                <li>Interviews</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONVERGENCE STATS BAND ===== -->
+      <section class="convergence-band">
+        <div class="convergence-bg">
+          <img src="images/saptarishi-galaxy.png" alt="Saptarishis beneath galaxies" />
+          <div class="galaxy-layer" id="galaxy-convergence"></div>
+          <div class="convergence-overlay"></div>
+        </div>
+        <div class="convergence-content container">
+          <p class="mono-label mono-label--light">संगम · Convergence of Energies</p>
+          <h2>Astrology is the science of alignment</h2>
+          <div class="stats-row">
+            <div class="stat"><strong>9</strong><span>Grahas aligned</span></div>
+            <div class="stat"><strong>12</strong><span>Rashis mapped</span></div>
+            <div class="stat"><strong>7</strong><span>Rishis guiding</span></div>
+            <div class="stat"><strong>27</strong><span>Nakshatras tracked</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== AI AGENTS ===== -->
+      <section class="agents-section" id="agents">
+        <div class="container">
+          <div class="section-header">
+            <p class="mono-label">सप्तऋषि AI Agents · Your personal cosmic guides</p>
+            <h2>Seven Rishis guide your <em>seven life domains</em></h2>
+            <p class="section-sub">Each Saptarishi embodies a domain of life wisdom. Your personal AI agents channel their ancient knowledge — giving you guidance that is both timeless and timely.</p>
+          </div>
+
+          <div class="agents-visual-band">
+            <div class="showcase-frame showcase-frame--wide">
+              <img src="images/saptarishi-golden-orb.png" alt="Saptarishis holding cosmic golden orb" />
+            </div>
+          </div>
+
+          <div class="agents-grid" id="agents-grid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SURYA DIVIDER ===== -->
+      <section class="surya-band">
+        <div class="surya-bg">
+          <img src="images/surya-chariot.png" alt="Surya the Sun God on his chariot" />
+          <div class="surya-overlay"></div>
+        </div>
+        <div class="surya-content container">
+          <p class="mono-label mono-label--light">सूर्य · The Cosmic Clock</p>
+          <h2>Time is the force.<br/>The stars are the signal.</h2>
+        </div>
+      </section>
+
+      <!-- ===== RASHI GRID ===== -->
+      <section class="rashi-section" id="sign-stream">
+        <div class="container">
+          <div class="section-header">
+            <p class="mono-label">Rashi · राशि · Your cosmic fingerprint</p>
+            <h2>12 signs. 12 energy channels. <em>One you.</em></h2>
+          </div>
+          <div class="sign-grid" id="sign-grid"></div>
+        </div>
+      </section>
+
+      <!-- ===== CTA / WAITLIST ===== -->
+      <section class="cta-section" id="launch">
+        <div class="cta-bg">
+          <img src="images/saptarishi-walking-galaxies.png" alt="Saptarishis walking among galaxies" />
+          <div class="galaxy-layer" id="galaxy-cta"></div>
+          <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content container">
+          <p class="mono-label mono-label--light">शुभारम्भ · Begin Auspiciously</p>
+          <h2>Every important decision deserves the right timing</h2>
+          <p class="cta-sub">Join families, founders, and seekers who trust Vedic timing intelligence for life's biggest moments.</p>
+          <form class="cta-form" id="waitlist-form">
+            <div class="form-row">
+              <input id="email" name="email" type="email" placeholder="your@email.com" aria-label="Email address" />
+              <button type="submit" class="btn btn--primary">Get Early Access</button>
+            </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">AA</span>
+          <div>
+            <p class="brand-name">Adiyogi Astro</p>
+            <p class="footer-tag">Ancient Vedic timing wisdom, delivered through AI.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="#features">Features</a>
+            <a href="#moments">Life Moments</a>
+            <a href="#agents">AI Rishis</a>
+            <a href="#sign-stream">Rashis</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#">Panchang</a>
+            <a href="#">Muhurat Calendar</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> Adiyogi Astro · सप्तऋषि × AI</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

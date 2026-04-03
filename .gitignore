@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.claude/
+
+# Original source images (renamed copies are in images/)
+0_*.png
+riya022518_*.png
+
+# Dev files
+galaxy.js
+*.log
