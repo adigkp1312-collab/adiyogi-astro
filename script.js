@@ -1,5 +1,5 @@
 /* ============================================
-   ADIYOGI ASTRO — Script (Light theme, Hex-style)
+   DAIVIK VANI — Script (Light theme, Hex-style)
    ============================================ */
 
 // --- Zodiac sign SVG art (light theme colors) ---
@@ -172,8 +172,8 @@ if (waitlistForm instanceof HTMLFormElement && emailInput && formStatus) {
       formStatus.classList.add("is-error");
       return;
     }
-    window.localStorage.setItem("adiyogi-waitlist-email", email);
-    formStatus.textContent = "You're on the list. The rishis will reach you.";
+    window.localStorage.setItem("daivik-vani-waitlist-email", email);
+    formStatus.textContent = "You're on the list. Karuna AI and the rishis will reach you.";
     formStatus.classList.add("is-success");
     waitlistForm.reset();
   });
