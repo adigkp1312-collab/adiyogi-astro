@@ -1,21 +1,21 @@
 /* ============================================
-   ADIYOGI ASTRO — Main Script
+   ADIYOGI ASTRO — Script (Light theme, Hex-style)
    ============================================ */
 
-// --- Zodiac sign SVG art (compact constellation style) ---
+// --- Zodiac sign SVG art (light theme colors) ---
 const SIGN_ART = {
-  Aries: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M20 42c0-12 4-20 8-24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M36 42c0-12-4-20-8-24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="42" r="2.5" fill="#E8871E"/><circle cx="36" cy="42" r="2.5" fill="#E8871E"/><circle cx="28" cy="16" r="2" fill="#D4A024"/></svg>`,
-  Taurus: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><circle cx="28" cy="34" r="12" stroke="#C4572A" stroke-width="2" fill="none"/><path d="M16 22c-4-6-4-10-2-14" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M40 22c4-6 4-10 2-14" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="8" r="2" fill="#E8871E"/><circle cx="42" cy="8" r="2" fill="#E8871E"/></svg>`,
-  Gemini: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M16 10h24M16 46h24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M22 10v36M34 10v36" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="24" r="2" fill="#D4A024"/><circle cx="34" cy="24" r="2" fill="#D4A024"/></svg>`,
-  Cancer: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M16 28c0-10 5-16 12-16s12 6 12 16" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M40 28c0 10-5 16-12 16s-12-6-12-16" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="22" cy="24" r="4" fill="#D4A024" opacity="0.6"/><circle cx="34" cy="32" r="4" fill="#D4A024" opacity="0.6"/></svg>`,
-  Leo: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><circle cx="28" cy="26" r="10" stroke="#C4572A" stroke-width="2" fill="none"/><path d="M24 16c-2-4-1-8 2-12" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M32 16c2-4 1-8-2-12" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="4" r="2" fill="#D4A024"/></svg>`,
-  Virgo: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M16 8v32c0 4 2 6 4 6s4-2 4-6V14" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M24 14v26c0 4 2 6 4 6s4-2 4-6V10" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M32 10v30c0 4 2 6 4 6" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="16" cy="8" r="2" fill="#D4A024"/></svg>`,
-  Libra: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M12 40h32M16 32h24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M28 32V18" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="16" r="4" stroke="#E8871E" stroke-width="1.5" fill="none"/><circle cx="28" cy="16" r="1.5" fill="#D4A024"/></svg>`,
-  Scorpio: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M12 10v26c0 4 2 6 4 6s4-2 4-6V16" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20 16v20c0 4 2 6 4 6s4-2 4-6V12" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M28 12v24c0 4 2 6 4 6h6" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M38 38l4 4-4 4" stroke="#E8871E" stroke-width="2" stroke-linecap="round" fill="none"/></svg>`,
-  Sagittarius: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M14 42L42 14" stroke="#C4572A" stroke-width="2.5" stroke-linecap="round"/><path d="M42 14H30M42 14v12" stroke="#C4572A" stroke-width="2.5" stroke-linecap="round"/><circle cx="42" cy="14" r="2.5" fill="#D4A024"/></svg>`,
-  Capricorn: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M14 20c4-6 8-10 12-10 6 0 8 4 8 10v16c0 4 2 6 4 6" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M38 42c4 0 6-4 6-8s-2-8-6-8" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="14" cy="20" r="2" fill="#D4A024"/></svg>`,
-  Aquarius: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M10 22c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#C4572A" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M10 34c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#C4572A" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>`,
-  Pisces: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#E8871E" stroke-width="0.5" opacity="0.15"/><path d="M20 10c-8 6-10 14-10 18s2 12 10 18" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M36 10c8 6 10 14 10 18s-2 12-10 18" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M12 28h32" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="22" r="2" fill="#D4A024"/><circle cx="36" cy="34" r="2" fill="#D4A024"/></svg>`,
+  Aries: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M20 42c0-12 4-20 8-24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M36 42c0-12-4-20-8-24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="42" r="2.5" fill="#E8871E"/><circle cx="36" cy="42" r="2.5" fill="#E8871E"/><circle cx="28" cy="16" r="2" fill="#D4A024"/></svg>`,
+  Taurus: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><circle cx="28" cy="34" r="12" stroke="#C4572A" stroke-width="2" fill="none"/><path d="M16 22c-4-6-4-10-2-14" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M40 22c4-6 4-10 2-14" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="8" r="2" fill="#E8871E"/><circle cx="42" cy="8" r="2" fill="#E8871E"/></svg>`,
+  Gemini: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M16 10h24M16 46h24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M22 10v36M34 10v36" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="24" r="2" fill="#D4A024"/><circle cx="34" cy="24" r="2" fill="#D4A024"/></svg>`,
+  Cancer: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M16 28c0-10 5-16 12-16s12 6 12 16" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M40 28c0 10-5 16-12 16s-12-6-12-16" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="22" cy="24" r="4" fill="#D4A024" opacity="0.4"/><circle cx="34" cy="32" r="4" fill="#D4A024" opacity="0.4"/></svg>`,
+  Leo: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><circle cx="28" cy="26" r="10" stroke="#C4572A" stroke-width="2" fill="none"/><path d="M24 16c-2-4-1-8 2-12" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M32 16c2-4 1-8-2-12" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="4" r="2" fill="#D4A024"/></svg>`,
+  Virgo: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M16 8v32c0 4 2 6 4 6s4-2 4-6V14" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M24 14v26c0 4 2 6 4 6s4-2 4-6V10" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M32 10v30c0 4 2 6 4 6" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="16" cy="8" r="2" fill="#D4A024"/></svg>`,
+  Libra: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M12 40h32M16 32h24" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><path d="M28 32V18" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="16" r="4" stroke="#E8871E" stroke-width="1.5" fill="none"/><circle cx="28" cy="16" r="1.5" fill="#D4A024"/></svg>`,
+  Scorpio: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M12 10v26c0 4 2 6 4 6s4-2 4-6V16" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20 16v20c0 4 2 6 4 6s4-2 4-6V12" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M28 12v24c0 4 2 6 4 6h6" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M38 38l4 4-4 4" stroke="#E8871E" stroke-width="2" stroke-linecap="round" fill="none"/></svg>`,
+  Sagittarius: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M14 42L42 14" stroke="#C4572A" stroke-width="2.5" stroke-linecap="round"/><path d="M42 14H30M42 14v12" stroke="#C4572A" stroke-width="2.5" stroke-linecap="round"/><circle cx="42" cy="14" r="2.5" fill="#D4A024"/></svg>`,
+  Capricorn: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M14 20c4-6 8-10 12-10 6 0 8 4 8 10v16c0 4 2 6 4 6" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M38 42c4 0 6-4 6-8s-2-8-6-8" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="14" cy="20" r="2" fill="#D4A024"/></svg>`,
+  Aquarius: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M10 22c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#C4572A" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M10 34c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#C4572A" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>`,
+  Pisces: `<svg viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="26" stroke="#EDABAB" stroke-width="0.5" opacity="0.4"/><path d="M20 10c-8 6-10 14-10 18s2 12 10 18" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M36 10c8 6 10 14 10 18s-2 12-10 18" stroke="#C4572A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M12 28h32" stroke="#C4572A" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="22" r="2" fill="#D4A024"/><circle cx="36" cy="34" r="2" fill="#D4A024"/></svg>`,
 };
 
 const SIGNS = [
@@ -53,17 +53,35 @@ const formStatus = document.getElementById("form-status");
 
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* --- Scroll reveal --- */
+/* --- Tab switching (Hex-style) --- */
+function initTabs() {
+  const labels = document.querySelectorAll(".tab-label");
+  const panels = document.querySelectorAll(".tab-panel");
+  labels.forEach((label) => {
+    label.addEventListener("click", () => {
+      const tab = label.dataset.tab;
+      labels.forEach((l) => l.classList.toggle("is-active", l === label));
+      panels.forEach((p) => p.classList.toggle("is-active", p.dataset.panel === tab));
+    });
+  });
+}
+
+/* --- Scroll reveal with spring physics --- */
 function initReveals() {
   const els = document.querySelectorAll(
-    ".section-header, .feature-card, .quote-card, .moment-showcase, .inline-quote, " +
-    ".convergence-content, .agents-visual-band, .agents-grid, .surya-content, " +
-    ".sign-grid, .cta-content, .hero-content, .hero-showcase"
+    ".section-header, .feature-card, .dashed-line-quote, .moment-card, " +
+    ".stats-row, .cta-card, .logos-band"
   );
+  const staggerEls = document.querySelectorAll(
+    ".agents-grid, .sign-grid, .features-grid, .moments-grid"
+  );
+
   if (!("IntersectionObserver" in window)) {
     els.forEach((el) => el.classList.add("reveal", "is-visible"));
+    staggerEls.forEach((el) => el.classList.add("reveal-stagger", "is-visible"));
     return;
   }
+
   const obs = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
@@ -73,12 +91,43 @@ function initReveals() {
         }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
   );
-  els.forEach((el) => {
-    el.classList.add("reveal");
-    obs.observe(el);
-  });
+
+  els.forEach((el) => { el.classList.add("reveal"); obs.observe(el); });
+  staggerEls.forEach((el) => { el.classList.add("reveal-stagger"); obs.observe(el); });
+}
+
+/* --- Number counter animation --- */
+function initCounters() {
+  const stats = document.querySelectorAll(".stat strong");
+  if (!stats.length) return;
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = parseInt(el.textContent, 10);
+          if (isNaN(target)) return;
+          let current = 0;
+          const duration = 1200;
+          const start = performance.now();
+          function tick(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            current = Math.round(eased * target);
+            el.textContent = current;
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          obs.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  stats.forEach((el) => obs.observe(el));
 }
 
 /* --- Build agents grid --- */
@@ -124,7 +173,7 @@ if (waitlistForm instanceof HTMLFormElement && emailInput && formStatus) {
       return;
     }
     window.localStorage.setItem("adiyogi-waitlist-email", email);
-    formStatus.textContent = "You're on the list. The rishis will reach you. ✨";
+    formStatus.textContent = "You're on the list. The rishis will reach you.";
     formStatus.classList.add("is-success");
     waitlistForm.reset();
   });
@@ -133,36 +182,29 @@ if (waitlistForm instanceof HTMLFormElement && emailInput && formStatus) {
 /* --- Init --- */
 buildAgentsGrid();
 buildSignGrid();
+initTabs();
 initReveals();
+requestAnimationFrame(() => initCounters());
 
-/* --- Galaxy WebGL backgrounds --- */
-import("./galaxy-effect.js")
-  .then(({ createGalaxy }) => {
-    const heroEl = document.getElementById("galaxy-hero");
-    if (heroEl) {
-      createGalaxy(heroEl, {
-        density: 0.7, glowIntensity: 0.3, saturation: 0.15, hueShift: 30,
-        twinkleIntensity: 0.4, rotationSpeed: 0.03, speed: 0.5,
-        mouseRepulsion: true, repulsionStrength: 2, transparent: true,
-      });
-    }
-
-    const convEl = document.getElementById("galaxy-convergence");
-    if (convEl) {
-      createGalaxy(convEl, {
-        density: 1.0, glowIntensity: 0.35, saturation: 0.1, hueShift: 35,
-        twinkleIntensity: 0.5, rotationSpeed: 0.02, speed: 0.4,
-        mouseRepulsion: false, autoCenterRepulsion: 0.4, transparent: true,
-      });
-    }
-
-    const ctaEl = document.getElementById("galaxy-cta");
-    if (ctaEl) {
-      createGalaxy(ctaEl, {
-        density: 0.5, glowIntensity: 0.25, saturation: 0.1, hueShift: 25,
-        twinkleIntensity: 0.5, rotationSpeed: 0.02, speed: 0.4,
-        mouseRepulsion: true, repulsionStrength: 1.5, transparent: true,
+/* --- PixelBlast background --- */
+import("./pixel-blast.js")
+  .then(({ createPixelBlast }) => {
+    const el = document.getElementById("pixel-blast");
+    if (el) {
+      createPixelBlast(el, {
+        variant: "square",
+        pixelSize: 4,
+        color: "#EDABAB",
+        patternScale: 2,
+        patternDensity: 1,
+        pixelSizeJitter: 0,
+        enableRipples: true,
+        rippleSpeed: 0.4,
+        rippleThickness: 0.12,
+        rippleIntensityScale: 1.5,
+        speed: 0.5,
+        edgeFade: 0.25,
       });
     }
   })
-  .catch((err) => console.warn("Galaxy effect unavailable:", err.message));
+  .catch((err) => console.warn("PixelBlast unavailable:", err.message));
