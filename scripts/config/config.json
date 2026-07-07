@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "description": "Daivik Vani configuration — model IDs, Vertex projects, and site settings. Mirrors Templeblogs scripts/config/config.json.",
+  "site": {
+    "name": "Daivik Vani",
+    "base_url": "http://localhost:3456"
+  },
+  "vertex": {
+    "project_id": "project-c13c32a3-31ba-480e-b5d",
+    "projects": [
+      {
+        "project_id": "project-c13c32a3-31ba-480e-b5d",
+        "account": "adigkp1312@gmail.com"
+      },
+      {
+        "project_id": "secret-footing-498105-n3",
+        "account": "aditya@adiyogiarts.com"
+      }
+    ],
+    "location": "global"
+  },
+  "models": {
+    "dv": {
+      "bundle": "gemini-2.5-flash",
+      "sections": "gemini-2.5-flash"
+    }
+  }
+}

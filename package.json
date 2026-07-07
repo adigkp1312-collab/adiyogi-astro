@@ -1,0 +1,13 @@
+{
+  "name": "daivik-vani",
+  "private": true,
+  "description": "Daivik Vani — static site + single self-healing content pipeline",
+  "scripts": {
+    "serve": "node serve.mjs",
+    "pipeline": "node scripts/run-dv-pipeline.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.8.0",
+    "better-sqlite3": "^12.8.0"
+  }
+}

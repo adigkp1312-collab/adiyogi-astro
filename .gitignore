@@ -9,3 +9,8 @@ riya022518_*.png
 # Dev files
 galaxy.js
 *.log
+
+# Pipeline working state (disposable — data/articles/*.json is the durable truth)
+data/dv.db
+data/dv.db-*
+data/.vertex-rr-index
