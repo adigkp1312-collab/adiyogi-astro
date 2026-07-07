@@ -24,7 +24,15 @@ const MIME = {
 
 createServer(async (req, res) => {
   let url = new URL(req.url, `http://localhost:${PORT}`);
-  let path = url.pathname === "/" ? "/index.html" : url.pathname;
+  let path = url.pathname;
+  // Redirect a bare directory path to its trailing-slash form (production
+  // static-host semantics), then resolve directories to index.html.
+  if (path !== "/" && !path.endsWith("/") && !extname(path)) {
+    res.writeHead(301, { Location: path + "/" });
+    res.end();
+    return;
+  }
+  if (path.endsWith("/")) path += "index.html";
   let filePath = join(__dirname, path);
   try {
     const data = await readFile(filePath);

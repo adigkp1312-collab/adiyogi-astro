@@ -1,0 +1,124 @@
+/* ============================================
+   DAIVIK VANI — Article pages
+   Reuses the landing page palette/typography
+   (tokens copied from ../styles.css :root).
+   ============================================ */
+
+:root {
+  --bg: #fcf8f8;
+  --bg-warm: #f9f1f1;
+  --surface: #ffffff;
+  --text: #31263B;
+  --text-muted: #89828d;
+  --text-loud: #14141C;
+  --border: #dbd7da;
+  --border-strong: #c4bfc3;
+  --accent: #C4572A;
+  --accent-warm: #E8871E;
+  --gold: #D4A024;
+  --rose: #F5C0C0;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+  --font-devanagari: "Noto Serif Devanagari", serif;
+  --max-w: 760px;
+  --radius: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* --- Header --- */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(252, 248, 248, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky; top: 0; z-index: 10;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; }
+.brand-mark {
+  display: inline-grid; place-items: center;
+  width: 34px; height: 34px; border-radius: 9px;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-display); font-size: 20px; letter-spacing: 0.5px;
+}
+.brand-name { font-family: var(--font-display); font-size: 22px; color: var(--text-loud); }
+.header-inner nav a { color: var(--text-muted); font-size: 14px; margin-left: 20px; transition: color .2s; }
+.header-inner nav a:hover { color: var(--accent); }
+
+/* --- Article --- */
+.article-wrap { padding: 48px 0 72px; }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; font-family: var(--font-mono); }
+.breadcrumb a:hover { color: var(--accent); }
+.article-category {
+  display: inline-block; font-family: var(--font-mono); font-size: 12px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--accent);
+  border: 1px solid var(--rose); border-radius: 999px; padding: 4px 12px; margin-bottom: 16px;
+}
+.article-title {
+  font-family: var(--font-display); font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.1; color: var(--text-loud); margin-bottom: 14px; font-weight: 400;
+}
+.article-lede { font-size: 20px; color: var(--text-muted); margin-bottom: 20px; }
+.article-meta { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin-bottom: 32px; }
+.article-meta span + span::before { content: "·"; margin: 0 8px; }
+
+.prose h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 30px; color: var(--text-loud);
+  margin: 40px 0 14px; line-height: 1.2;
+}
+.prose p { margin: 0 0 18px; }
+.prose ul { list-style: disc; padding-left: 22px; margin: 0 0 18px; }
+.prose li { margin-bottom: 8px; }
+.prose .list-intro { margin-bottom: 10px; }
+.prose .faq { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px; }
+.prose .faq dt { font-weight: 600; color: var(--text-loud); margin-bottom: 4px; }
+.prose .faq dd { margin: 0 0 16px; color: var(--text); }
+.devanagari { font-family: var(--font-devanagari); }
+
+/* --- Listing --- */
+.listing-head { padding: 56px 0 28px; }
+.listing-title { font-family: var(--font-display); font-size: clamp(36px, 7vw, 60px); color: var(--text-loud); font-weight: 400; }
+.listing-sub { color: var(--text-muted); font-size: 18px; margin-top: 8px; }
+.listing-group { padding: 8px 0 20px; }
+.listing-group h2 {
+  font-family: var(--font-mono); font-size: 13px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--accent); margin: 24px 0 12px;
+}
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.card {
+  display: block; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px; transition: border-color .2s, transform .2s;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--text-loud); margin-bottom: 8px; line-height: 1.2; }
+.card p { font-size: 14px; color: var(--text-muted); }
+.empty { color: var(--text-muted); padding: 40px 0; }
+
+/* --- Footer --- */
+.site-footer { border-top: 1px solid var(--border); padding: 32px 0; margin-top: 48px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-name { font-family: var(--font-display); font-size: 20px; color: var(--text-loud); }
+.footer-tag { font-size: 13px; color: var(--text-muted); }
+.footer-back a { color: var(--accent); font-size: 14px; }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .header-inner nav a { margin-left: 12px; }
+}
