@@ -14,3 +14,6 @@ galaxy.js
 data/dv.db
 data/dv.db-*
 data/.vertex-rr-index
+
+# screenshot-test output
+screenshots/
